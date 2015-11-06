@@ -1,0 +1,24 @@
+{
+  "name": "rethinkchat",
+  "version": "0.0.0",
+  "authors": [
+    "Asad Dhamani <dhamaniasad@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-socket-io": "~0.7.0",
+    "jquery": "~2.1.4",
+    "socket.io-client": "~1.3.7",
+    "foundation": "~5.5.3",
+    "angularjs": "~1.4.7",
+    "angular-cookies": "~1.4.7"
+  }
+}

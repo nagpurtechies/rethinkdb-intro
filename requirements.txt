@@ -1,0 +1,7 @@
+Flask
+rethinkdb
+requests
+eventlet
+Flask_SocketIO
+fake-factory
+
