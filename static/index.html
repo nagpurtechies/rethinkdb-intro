@@ -1,0 +1,36 @@
+<body ng-app="myApp">
+<link rel="stylesheet" href="/static/lib/foundation/css/foundation.css">
+<link rel="stylesheet" href="/static/css/styles.css">
+<script src="/static/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="/static/lib/socket.io-client/socket.io.js"></script>
+<div class="grid" ng-controller="ChatController">
+    <div class="row">
+    <div class="small-6 columns">
+    <div ng-repeat="message in messages">
+        <span style="color: red;">{{message.username}}: </span>{{ message.text }}
+    </div>
+    </div>
+    </div>
+    <form ng-submit="newMessage()" ng-if="username !== undefined">
+        <div class="row">
+            <div class="small-6 columns">
+                <input type="text" ng-model="message.text">
+            </div>
+            <button class="button small">Send</button>
+        </div>
+    </form>
+    <form ng-submit="setUsername()" ng-if="username === undefined">
+        <div class="row">
+            <div class="small-6 columns">
+                <input type="text" ng-model="user.name">
+            </div>
+        <button class="button small">Set Username</button>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="/static/lib/angularjs/angular.js"></script>
+<script type="text/javascript" src="/static/lib/angular-socket-io/socket.js"></script>
+<script type="text/javascript" src="/static/lib/angular-cookies/angular-cookies.js"></script>
+<script type="text/javascript" src="/static/app.js"></script>
+</body>
+
